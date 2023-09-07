@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/time_View"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:textSize="56sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/start_button" />
+
+    <Button
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:onClick="onClickStart"
+        android:text="@string/start"
+        app:layout_constraintTop_toBottomOf="@+id/time_View"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:onClick="onClickStop"
+        android:text="@string/stop"
+        app:layout_constraintTop_toBottomOf="@+id/start_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:onClick="onClickReset"
+        android:text="@string/reset"
+        app:layout_constraintTop_toBottomOf="@+id/stop_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/vuelta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onClickVuelta"
+        android:text="@string/vuelta"
+        app:layout_constraintTop_toBottomOf="@+id/reset_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/vueltaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/vuelta"
+        app:layout_constraintTop_toBottomOf="@+id/vuelta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/horaTextView" />
+
+    <TextView
+        android:id="@+id/horaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hora"
+        app:layout_constraintTop_toBottomOf="@+id/vuelta"
+        app:layout_constraintStart_toEndOf="@+id/vueltaTextView"
+        app:layout_constraintEnd_toStartOf="@+id/tiempoTotalTextView"
+     />
+
+    <TextView
+        android:id="@+id/tiempoTotalTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/tiempoTotal"
+        app:layout_constraintTop_toBottomOf="@+id/vuelta"
+        app:layout_constraintStart_toEndOf="@+id/horaTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+ />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
